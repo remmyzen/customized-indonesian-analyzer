@@ -1,5 +1,5 @@
 #!/bin/bash
 
-javac SearchFiles.java -cp "lib/*"
+javac *.java -cp "lib/*"
 
 java -cp ".:lib/*" SearchFiles
