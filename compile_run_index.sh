@@ -1,5 +1,5 @@
 #!/bin/bash
 
-javac IndexFiles.java -cp "lib/*"
+javac *.java -cp "lib/*"
 
 java -cp ".:lib/*" IndexFiles
