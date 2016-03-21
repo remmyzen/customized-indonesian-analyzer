@@ -29,10 +29,14 @@ import org.apache.lucene.util.Version;
 
 public class IndexFiles {
 	/** SET THE VARIABLE HERE */
+	// Corpus Path of text files to be indexed
 	public static final String CORPUS_PATH = "corpus-example/";
+	// Path for index result
 	public static final String INDEX_PATH = "index-example/";
-	private static final boolean USE_STEMMER = false;
-	private static final boolean USE_STOPWORD = false;
+	// True if you want to use stemmer, false otherwise
+	public static final boolean USE_STEMMER = false;
+	// True if you want to use stopword removal, false otherwise
+	public static final boolean USE_STOPWORD = false;
 
 	public static void main(String[] args) {
 

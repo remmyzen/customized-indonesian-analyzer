@@ -22,22 +22,29 @@ import org.apache.lucene.search.similarities.Similarity;
 import org.apache.lucene.store.FSDirectory;
 
 public class SearchFiles {
+	/** SET THE VARIABLE HERE */
+	// Index from IndexFiles path
+	public static final String INDEX_PATH = "index-example/";
+	// True if you want to use stemmer, false otherwise
+	public static final boolean USE_STEMMER = false;
+	// True if you want to use stopword removal, false otherwise
+	public static final boolean USE_STOPWORD = false;
+	
 	public static void main(String[] args) {
-		String index = "index";
 		String field = "contents";
 		boolean raw = false;
 		String queryString = null;
-		int hitsPerPage = 2;
+		int hitsPerPage = 10;
 
 		try {
 			IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths
-					.get(index)));
+					.get(INDEX_PATH)));
 
 			IndexSearcher searcher = new IndexSearcher(reader);
 			Similarity similarity = new DefaultSimilarity();
 			searcher.setSimilarity(similarity);
 
-			Analyzer analyzer = new CustomizedIndonesianAnalyzer(true, false);
+			Analyzer analyzer = new CustomizedIndonesianAnalyzer(USE_STEMMER, USE_STOPWORD);
 
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					System.in, StandardCharsets.UTF_8));
