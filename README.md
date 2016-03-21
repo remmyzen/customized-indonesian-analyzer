@@ -2,7 +2,7 @@
 
 ## Motivation / Motivasi
 
-Apache Lucene already provides analyzer for Bahasa Indonesia with stopword removal and stemmer [here](https://lucene.apache.org/core/5_5_0/analyzers-common/org/apache/lucene/analysis/id/IndonesianAnalyzer.html). However, the code doesn't provide feature to customize whether we want to use stopword removal and/or stemmer or not. This repository provide customized Indonesian Analyzer to turn stopword removal and/or stemmer process on or off. This repository also used for Advanced Information Retrieval course assignment in [Faculty of Computer Science Universitas Indonesia](http://www.cs.ui.ac.id).
+Apache Lucene already provides analyzer for Bahasa Indonesia with stopword removal and stemmer [here](https://lucene.apache.org/core/5_5_0/analyzers-common/org/apache/lucene/analysis/id/IndonesianAnalyzer.html). However, the code doesn't provide feature to customize whether we want to use stopword removal and/or stemmer or not. This repository provide customized Indonesian Analyzer to turn stopword removal and/or stemmer process on or off. This repository also used for Advanced Information Retrieval course assignment in [Faculty of Computer Science Universitas Indonesia](http://www.cs.ui.ac.id/?lang=en).
 
 Apache Lucene sudah menyediakan *analyzer* untuk Bahasa Indonesia dengan pembuangan *stopword* dan imbuhan [di sini](https://lucene.apache.org/core/5_5_0/analyzers-common/org/apache/lucene/analysis/id/IndonesianAnalyzer.html). Namun, kode tersebut tidak menyediakan fitur untuk mengkustomisasi apakah kita ingin menggunakan pembuangan *stopword* dan/atau imbuhan atau tidak. Repositori ini menyediakan kustomisasi *analyzer* untuk Bahasa Indonesia yang dapat mengatur proses pembuangan *stopword* dan/atau imbuhan. Repositori ini juga digunakan untuk tugas kuliah Perolehan Informasi Lanjut di [Fakultas Ilmu Komputer Universitas Indonesia](http://www.cs.ui.ac.id).
 
@@ -38,10 +38,10 @@ public static final boolean USE_STOPWORD = false;
 
 **CATATAN PENTING**: Pastikan SearchFiles menggunakan konfigurasi yang sama dengan index yang ada di `INDEX_PATH`. Contoh: Jika Anda membuat index menggunakan pembuangan imbuhan tetapi tidak pembuangan *stopword*, maka Anda juga harus membuat `USE_STEMMER = true` dan `USE_STOPWORD = false` di berkas SearchFiles.
 
-* Use `compile_run_index.bat` or `compile_run_index.sh` to create the index. / Gunakan `compile_run_index.bat` atau `compile_run_index.sh` untuk membuat indeks.
+* Use `compile_run_search.bat` or `compile_run_search.sh` to create the index. / Gunakan `compile_run_search.bat` atau `compile_run_search.sh` untuk membuat indeks.
 * The result of your index will be available in the folder specified in `INDEX_PATH` variable. / Hasil index Anda akan tersedia pada folder yang dispesifikasikan pada variabel `INDEX_PATH`.
 
-== Contact / Kontak
+## Contact / Kontak
 Feel free to contact me at remmy.augusta [at] ui.ac.id for any inquiries.
 
 Silakan kontak saya di remmy.augusta [at] ui.ac.id untuk pertanyaan apapun.
